@@ -1,0 +1,13 @@
+---
+radius: 0.1 # Compulsory: Minimum radius 0.1 miles, maximum radius is 40 miles.
+order_by: "age"
+listing_status: "rent"
+include_sold: 0
+include_rented: 0
+minimum_price: 500 # per week price
+maximum_price: 500 # per week price
+minimum_beds: 3
+maximum_beds: 4
+furnished: "furnished" # "furnished", "unfurnished" or "part-furnished"
+page_size: 100 # 10 minimum - 100 maximum
+summarised: "yes" # Specifying "yes"/"true" will return a cut-down entry for each listing with the description cut short and the following fields will be removed: price_change, floor_plan.
