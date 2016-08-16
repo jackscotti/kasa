@@ -21,9 +21,13 @@ describe QueryBuilder do
       minimum_beds: 3,
       maximum_beds: 4,
     }}
+    builder.stub(:key) {
+      "a-key"
+    }
 
     expect(builder.query).to eq(
       "https://www.api.com?" +
+      "api_key=a-key&" +
       "maximum_beds=4&" +
       "maximum_price=500&" +
       "minimum_beds=3"

@@ -9,11 +9,17 @@ class QueryBuilder
 
   def query
     query = Addressable::URI.parse(root)
-    query.query_values = search_parameters
+    query.query_values = search_parameters.merge!(api_key: key)
     query.to_s
   end
 
 private
+
+  def key
+    require 'dotenv' # this needs to be in the app initializer
+    Dotenv.load # this needs to be in the app initializer
+    ENV['ZOOPLA_KEY']
+  end
 
   def root
     "http://api.zoopla.co.uk/api/v1/property_listings.json"
