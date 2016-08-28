@@ -4,6 +4,7 @@ gem 'addressable', '~> 2.4'
 gem 'bundler', '~> 1.12', '>= 1.12.5'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'ruby-trello', '~> 1.4', '>= 1.4.2'
+gem 'httparty', '~> 0.13.7'
 
 group :test do
   gem 'rspec', '~> 3.5'
